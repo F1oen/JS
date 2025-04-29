@@ -52,13 +52,4 @@ const books = [
     const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
     wishlistDiv.innerHTML = wishlist.map(book => `<div>${book.title} by ${book.author}</div>`).join('');
   }
-
-  function removeFromWishlist(title) {
-    let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-    wishlist = wishlist.filter(book => book.title !== title);
-    localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    showWishlist();
-  }
-  
   showWishlist();
-  
