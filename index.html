@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Recommendation App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Find Your Next Book</h1>
+  <form id="book-form">
+    <label>Genre:
+      <select name="genre">
+        <option value="">Any</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Non-fiction">Non-fiction</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Mystery">Mystery</option>
+      </select>
+    </label><br><br>
+    <label>Author: <input type="text" name="author" /></label><br><br>
+    <label>Price Range:
+      <input type="number" name="minPrice" placeholder="Min"> -
+      <input type="number" name="maxPrice" placeholder="Max">
+    </label><br><br>
+    <label>Language:
+      <input type="text" name="language" placeholder="e.g. English">
+    </label><br><br>
+    <label>Format:
+      <select name="format">
+        <option value="">Any</option>
+        <option value="Hardcover">Hardcover</option>
+        <option value="Paperback">Paperback</option>
+        <option value="eBook">eBook</option>
+      </select>
+    </label><br><br>
+    <label>Publication Year: <input type="number" name="year" /></label><br><br>
+    <button type="submit">Get Recommendations</button>
+  </form>
+
+  <div id="results"></div>
+  <div><button onclick="removeFromWishlist('${book.title}')">❌</button></div>
+
+  <h2>Your Wishlist</h2>
+  <div class="wishlist" id="wishlist"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
